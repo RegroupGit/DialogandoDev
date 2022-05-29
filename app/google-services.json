@@ -1,34 +1,33 @@
 {
   "project_info": {
-    "project_number": "260466579552",
-    "firebase_url": "https://um-mensageiro-qualquer-default-rtdb.firebaseio.com",
-    "project_id": "um-mensageiro-qualquer",
-    "storage_bucket": "um-mensageiro-qualquer.appspot.com"
+    "project_number": "549698936257",
+    "project_id": "ummensageiroqualquer-9055f",
+    "storage_bucket": "ummensageiroqualquer-9055f.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:260466579552:android:4b1a51bb1addb4ba060b05",
+        "mobilesdk_app_id": "1:549698936257:android:51a1f6c609ea9d055f6340",
         "android_client_info": {
           "package_name": "com.matilhadeestudos.mensageiroqualquer"
         }
       },
       "oauth_client": [
         {
-          "client_id": "260466579552-nhj1h7b7uh1b2gc5rjci7la1d17bq60g.apps.googleusercontent.com",
+          "client_id": "549698936257-u92c6kg2tjm552h4r3n2edqqrilb5md2.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCaHXCkgj5BCuGSeW9A1RS5BL_bf1NSRn8"
+          "current_key": "AIzaSyCY-zsk6JQ2to8ERhN0Pac9y4_JZ4fVVVs"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "260466579552-nhj1h7b7uh1b2gc5rjci7la1d17bq60g.apps.googleusercontent.com",
+              "client_id": "549698936257-u92c6kg2tjm552h4r3n2edqqrilb5md2.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
