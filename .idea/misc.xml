@@ -8,6 +8,15 @@
         <entry key="..\:/Users/gabri/AndroidStudioProjects/Mensageiroqualquer/app/src/main/res/layout/adaptador_contatos.xml" value="0.33" />
         <entry key="..\:/Users/gabri/AndroidStudioProjects/Mensageiroqualquer/app/src/main/res/layout/fragment_contato.xml" value="0.2" />
         <entry key="..\:/Users/gabri/AndroidStudioProjects/Mensageiroqualquer/app/src/main/res/layout/fragment_lista_contatos.xml" value="0.25" />
+        <entry key="..\:/android user/DialogandoDev/app/src/main/res/drawable/background_splash.xml" value="0.117" />
+        <entry key="..\:/android user/DialogandoDev/app/src/main/res/drawable/borda_botao.xml" value="0.117" />
+        <entry key="..\:/android user/DialogandoDev/app/src/main/res/drawable/cointainer_text_input.xml" value="0.117" />
+        <entry key="..\:/android user/DialogandoDev/app/src/main/res/drawable/container_caixa_texto.xml" value="0.2075" />
+        <entry key="..\:/android user/DialogandoDev/app/src/main/res/drawable/textinput.xml" value="0.117" />
+        <entry key="..\:/android user/DialogandoDev/app/src/main/res/layout/activity_esqueci_senha.xml" value="0.1" />
+        <entry key="..\:/android user/DialogandoDev/app/src/main/res/layout/activity_splash.xml" value="0.2" />
+        <entry key="..\:/android user/DialogandoDev/app/src/main/res/layout/activity_tela_cadastro.xml" value="0.2265625" />
+        <entry key="..\:/android user/DialogandoDev/app/src/main/res/layout/activity_tela_login.xml" value="0.2265625" />
       </map>
     </option>
   </component>

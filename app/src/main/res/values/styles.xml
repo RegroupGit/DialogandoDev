@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="container_caixa_texto">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">250dp</item>
+        <item name="android:background">@drawable/container_caixa_texto</item>
+
+    </style>
+
+    <style name="container_login">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">250dp</item>
+        <item name="android:background">@drawable/filtro_tela_login</item>
+
+    </style>
+
+    <style name="container_botao">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">250dp</item>
+        <item name="android:background">@drawable/borda_botao</item>
+
+    </style>
+
+    <style name="borda">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">250dp</item>
+        <item name="android:background">@drawable/cointainer_text_input</item>
+
+    </style>
+
+
+</resources>
