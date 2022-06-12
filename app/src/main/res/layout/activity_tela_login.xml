@@ -6,164 +6,142 @@
     android:layout_height="match_parent"
     tools:context=".TelaLogin">
 
-    <ImageView
-        android:id="@+id/imageView2"
+    <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:background="#BA9A9A"
-        android:scaleType="centerCrop"
-        android:src="@drawable/imag"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:background="#0005ABFD"
+        android:text="@string/logo_temp"
+        android:textColor="#000000"
+        android:textSize="50sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="@+id/view2"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        tools:text="D/G" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        style="@style/container_login"
+    <View
+        android:id="@+id/view2"
+        style="@style/container_caixa_texto"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:backgroundTint="@color/corDeFundoLogin"
+        android:layout_height="196dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:elevation="34dp"
+        android:foregroundGravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="70dp"
-            android:background="#0005ABFD"
-            android:text="@string/logo_temp"
-            android:textColor="#000000"
-            android:textSize="50sp"
-            app:layout_constraintBottom_toTopOf="@+id/view2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:text="D/G" />
+    <Button
+        android:id="@+id/entrar"
+        style="@style/container_botao"
+        android:layout_width="117dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="60dp"
+        android:text="Entrar"
+        android:textColor="#EAE7E7"
+        app:layout_constraintEnd_toEndOf="@+id/view2"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
 
-        <View
-            android:id="@+id/view2"
-            style="@style/container_caixa_texto"
-            android:layout_width="0dp"
-            android:layout_height="200dp"
+    <Button
+        android:id="@+id/teste"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="teste Regroup"
+        android:textColor="#5BF3EE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:backgroundTint="@color/design_default_color_on_primary"
-            android:foregroundGravity="center"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/textforgetSenha"
+        android:layout_width="222dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/corNull"
+        android:minHeight="48dp"
+        android:text="Esqueceu a senha?"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <Button
-            android:id="@+id/entrar"
-            style="@style/container_botao"
-            android:layout_width="117dp"
-            android:layout_height="53dp"
-            android:layout_marginTop="50dp"
-            android:text="Entrar"
-            android:textColor="#EAE7E7"
-            app:layout_constraintEnd_toEndOf="@+id/view2"
-            app:layout_constraintStart_toStartOf="@+id/view2"
-            app:layout_constraintTop_toBottomOf="@+id/view2" />
+    <Button
+        android:id="@+id/buttonCadastro"
+        style="@style/container_botao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:elevation="30dp"
+        android:text="Cadastrar"
+        android:textColor="#EAE7E7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textforgetSenha" />
 
-        <TextView
-            android:id="@+id/textforgetSenha"
-            android:layout_width="222dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="29dp"
-            android:layout_marginEnd="28dp"
-            android:background="@color/corNull"
-            android:minHeight="48dp"
-            android:text="Esqueceu a senha?"
-            android:textColor="#ffffffff"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/buttonCadastro"
-            app:layout_constraintHorizontal_bias="0.4"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/entrar"
-            app:layout_constraintVertical_bias="1.0" />
+    <EditText
+        android:id="@+id/nome"
+        style="@style/borda"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/cointainer_text_input"
+        android:backgroundTint="@color/caixaTextoCointeirnes"
+        android:elevation="36dp"
+        android:ems="10"
+        android:hint="@string/email"
+        android:inputType="textPersonName"
+        android:textColorHint="#9F9191"
+        app:layout_constraintEnd_toEndOf="@+id/view2"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toTopOf="@+id/view2" />
 
-        <Button
-            android:id="@+id/teste"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="teste Regroup"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/corNull"
+        android:elevation="36dp"
+        android:text="@string/senha"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/senha"
+        app:layout_constraintStart_toStartOf="@+id/senha" />
 
-        <Button
-            android:id="@+id/buttonCadastro"
-            style="@style/container_botao"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="16dp"
-            android:text="Cadastrar"
-            android:textColor="#EAE7E7"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+    <EditText
+        android:id="@+id/senha"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/cointainer_text_input"
+        android:backgroundTint="@color/caixaTextoCointeirnes"
+        android:elevation="35dp"
+        android:ems="10"
+        android:hint="@string/senha"
+        android:inputType="textPersonName"
+        android:textColorHint="#9F9191"
+        app:layout_constraintEnd_toEndOf="@+id/view2"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:layout_constraintTop_toBottomOf="@+id/nome" />
 
-        <EditText
-            android:id="@+id/nome"
-            style="@style/borda"
-            android:layout_width="327dp"
-            android:layout_height="44dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginEnd="30dp"
-            android:background="@drawable/cointainer_text_input"
-            android:backgroundTint="#F1EEEE"
-            android:ems="10"
-            android:hint="@string/email"
-            android:inputType="textPersonName"
-            app:layout_constraintEnd_toEndOf="@+id/view2"
-            app:layout_constraintStart_toStartOf="@+id/view2"
-            app:layout_constraintTop_toTopOf="@+id/view2" />
-
-        <EditText
-            android:id="@+id/senha"
-            android:layout_width="323dp"
-            android:layout_height="45dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="30dp"
-            android:background="@drawable/cointainer_text_input"
-            android:backgroundTint="#F1EEEE"
-            android:ems="10"
-            android:hint="@string/senha"
-            android:inputType="textPersonName"
-            app:layout_constraintEnd_toEndOf="@+id/nome"
-            app:layout_constraintHorizontal_bias="0.508"
-            app:layout_constraintStart_toStartOf="@+id/nome"
-            app:layout_constraintTop_toBottomOf="@+id/nome" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/corNull"
-            android:text="@string/email"
-            android:textColor="@color/black"
-            app:layout_constraintBottom_toTopOf="@+id/nome"
-            app:layout_constraintStart_toStartOf="@+id/nome" />
-
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/corNull"
-            android:text="@string/senha"
-            android:textColor="@color/black"
-            app:layout_constraintBottom_toTopOf="@+id/senha"
-            app:layout_constraintStart_toStartOf="@+id/senha" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/corNull"
+        android:elevation="36dp"
+        android:text="@string/email"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/nome"
+        app:layout_constraintStart_toStartOf="@+id/nome" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

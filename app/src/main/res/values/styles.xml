@@ -4,7 +4,7 @@
     <style name="container_caixa_texto">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">250dp</item>
-        <item name="android:background">@drawable/container_caixa_texto</item>
+        <item name="android:background">@drawable/shadows</item>
 
     </style>
 

@@ -14,15 +14,27 @@
         android:theme="@style/Theme.Mensageiroqualquer"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:screenOrientation="fullUser">
+            android:name=".SplashActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".EsqueciSenha"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TelaLogin"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TelaCadastro"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>

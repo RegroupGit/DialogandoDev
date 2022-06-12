@@ -1,5 +1,6 @@
 package com.matilhadeestudos.mensageiroqualquer;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -44,7 +45,7 @@ public class TelaLogin extends AppCompatActivity {
         testePontos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Intent intent = new Intent(getApplicationContext(), TelaDeContatos.class);
+                //Intent intent = new Intent(getApplicationContext(), TelaDeConversas.class);
                // startActivity(intent);
             }
         });
@@ -52,16 +53,24 @@ public class TelaLogin extends AppCompatActivity {
 
     }
     public void cadastro(){
-        //Intent intent = new Intent(getApplicationContext(), TelaCadastro.class);
-        //startActivity(intent);
+        Intent intent = new Intent(getApplicationContext(), TelaCadastro.class);
+        startActivity(intent);
     }
     public void Entrar(){
-       // Intent intent = new Intent(getApplicationContext(), TelaDeContatos.class);
-      //  startActivity(intent);
+        receberDados();
+        logar();
 
     }
     public void esqueciSenha(){
-        //Intent intent = new Intent(getApplicationContext(), EsqueciSenha.class);
-       // startActivity(intent);
+        Intent intent = new Intent(getApplicationContext(), EsqueciSenha.class);
+        startActivity(intent);
     }
+
+    public void receberDados(){
+
+    }
+    public void logar(){
+
+    }
+
 }
