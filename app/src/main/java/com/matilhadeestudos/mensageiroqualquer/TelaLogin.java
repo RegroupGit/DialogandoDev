@@ -4,14 +4,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.material.textfield.TextInputEditText;
 
 public class TelaLogin extends AppCompatActivity {
 
     Button cadastroButton, entrar, testePontos;
     TextView esqueceuSenha;
+    private EditText email, senha;
 
 
     @Override
@@ -23,6 +27,8 @@ public class TelaLogin extends AppCompatActivity {
         testePontos = findViewById(R.id.teste);
         cadastroButton = findViewById(R.id.buttonCadastro);
         esqueceuSenha = findViewById(R.id.textforgetSenha);
+        email = findViewById(R.id.email);
+        senha = findViewById(R.id.senha);
 
         getSupportActionBar().hide();
 
