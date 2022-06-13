@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TelaCadastro">
+    tools:context=".Activity.TelaCadastro">
 
     <TextView
         android:id="@+id/textView2"
@@ -13,7 +13,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="24dp"
-        android:text="Bem vindo!"
+        android:text="@string/b_vindo"
         android:textAlignment="center"
         android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/textView6"
@@ -30,7 +30,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="24dp"
-        android:text="Preencha os dados a baixo para realizar o cadastro!"
+        android:text="@string/A_cadastro"
         android:textAlignment="center"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
@@ -57,32 +57,35 @@
             android:id="@+id/nomeCadastro"
             android:layout_width="match_parent"
             android:layout_height="48dp"
+            android:autofillHints=""
             android:ems="10"
             android:hint="@string/nome"
             android:inputType="textPersonName"
-            android:autofillHints="" />
+            tools:ignore="TextContrastCheck" />
 
         <EditText
             android:id="@+id/emailCadastro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:autofillHints=""
             android:ems="10"
             android:hint="@string/email"
-            android:inputType="textPersonName"
+            android:inputType="textWebEmailAddress"
             android:minHeight="48dp"
-            android:autofillHints="" />
+            tools:ignore="TextContrastCheck" />
 
         <EditText
             android:id="@+id/senhaCadastro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:autofillHints=""
             android:ems="10"
             android:hint="@string/senha"
-            android:inputType="textPersonName"
+            android:inputType="textPassword"
             android:minHeight="48dp"
-            android:autofillHints="" />
+            tools:ignore="TextContrastCheck" />
 
     </LinearLayout>
 
@@ -92,7 +95,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:background="@drawable/borda_botao"
-        android:text="Enviar"
+        android:text="@string/enviar"
         android:textColor="#E6E4E4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

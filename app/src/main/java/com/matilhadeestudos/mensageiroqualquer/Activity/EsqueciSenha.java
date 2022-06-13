@@ -1,8 +1,10 @@
-package com.matilhadeestudos.mensageiroqualquer;
+package com.matilhadeestudos.mensageiroqualquer.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.matilhadeestudos.mensageiroqualquer.R;
 
 public class EsqueciSenha extends AppCompatActivity {
 
@@ -10,5 +12,6 @@ public class EsqueciSenha extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_esqueci_senha);
+        getSupportActionBar().hide();
     }
 }

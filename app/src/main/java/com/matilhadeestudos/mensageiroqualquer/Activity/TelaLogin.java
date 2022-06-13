@@ -1,4 +1,4 @@
-package com.matilhadeestudos.mensageiroqualquer;
+package com.matilhadeestudos.mensageiroqualquer.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.material.textfield.TextInputEditText;
+import com.matilhadeestudos.mensageiroqualquer.R;
 
 public class TelaLogin extends AppCompatActivity {
 
@@ -51,6 +51,7 @@ public class TelaLogin extends AppCompatActivity {
         testePontos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                testar();
                 //Intent intent = new Intent(getApplicationContext(), TelaDeConversas.class);
                // startActivity(intent);
             }
@@ -77,6 +78,11 @@ public class TelaLogin extends AppCompatActivity {
     }
     public void logar(){
 
+    }
+
+    public void testar() {
+        Intent intent = new Intent(getApplicationContext(), ListaContatos.class);
+        startActivity(intent);
     }
 
 }

@@ -4,7 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/gabri/AndroidStudioProjects/Mensageiroqualquer/app/src/main/res/drawable/textinput.xml" value="0.209" />
-        <entry key="..\:/Users/gabri/AndroidStudioProjects/Mensageiroqualquer/app/src/main/res/layout/activity_lista_contatos.xml" value="0.22" />
+        <entry key="..\:/Users/gabri/AndroidStudioProjects/Mensageiroqualquer/app/src/main/res/layout/activity_lista_contatos.xml" value="0.25" />
         <entry key="..\:/Users/gabri/AndroidStudioProjects/Mensageiroqualquer/app/src/main/res/layout/activity_main.xml" value="0.2975630611372381" />
         <entry key="..\:/Users/gabri/AndroidStudioProjects/Mensageiroqualquer/app/src/main/res/layout/activity_splash.xml" value="0.31765711842667804" />
         <entry key="..\:/Users/gabri/AndroidStudioProjects/Mensageiroqualquer/app/src/main/res/layout/activity_tela_cadastro.xml" value="0.33" />
@@ -12,6 +12,7 @@
         <entry key="..\:/Users/gabri/AndroidStudioProjects/Mensageiroqualquer/app/src/main/res/layout/adaptador_contatos.xml" value="0.33" />
         <entry key="..\:/Users/gabri/AndroidStudioProjects/Mensageiroqualquer/app/src/main/res/layout/fragment_contato.xml" value="0.2" />
         <entry key="..\:/Users/gabri/AndroidStudioProjects/Mensageiroqualquer/app/src/main/res/layout/fragment_lista_contatos.xml" value="0.25" />
+        <entry key="..\:/Users/gabri/AndroidStudioProjects/Mensageiroqualquer/app/src/main/res/layout/lista_contatos.xml" value="0.1" />
       </map>
     </option>
   </component>

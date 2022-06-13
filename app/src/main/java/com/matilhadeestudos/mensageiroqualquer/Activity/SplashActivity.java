@@ -1,9 +1,11 @@
-package com.matilhadeestudos.mensageiroqualquer;
+package com.matilhadeestudos.mensageiroqualquer.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.matilhadeestudos.mensageiroqualquer.R;
 
 import java.util.TimerTask;
 
