@@ -8,5 +8,7 @@
     <string name='logo_temp'>D/G</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="teste">Teste Regroup</string>
+    <string name="e_senha">Esqueceu a senha?</string>
 
 </resources>
