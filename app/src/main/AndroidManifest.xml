@@ -38,7 +38,7 @@
             android:exported="true"
             android:screenOrientation="portrait" />
         <activity android:name=".Activity.ListaContatos"
-            android:screenOrientation="fullUser"
+            android:screenOrientation="portrait"
             android:exported="true" />
     </application>
 

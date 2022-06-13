@@ -11,6 +11,7 @@ public class Contato {
         this.Nome = Nome;
         this.email = Email;
         this.imagem = imagem;
+        System.out.println(this.Nome + "\n" + this.email + "\n" + this.imagem);
     }
 
     public String getNome() {

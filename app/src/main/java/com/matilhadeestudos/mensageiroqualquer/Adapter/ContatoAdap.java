@@ -16,18 +16,19 @@ import java.util.List;
 
 public class ContatoAdap extends RecyclerView.Adapter<ContatoAdap.MyViewHolder> {
     private List<Contato> listaContatos;
+
     public ContatoAdap(List<Contato> lista) {this.listaContatos = lista;}
 
 
     @NonNull
     @Override
-    public ContatoAdap.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemLista = LayoutInflater.from(parent.getContext()).inflate(R.layout.adaptador_contatos, parent, false);
         return new MyViewHolder(itemLista);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ContatoAdap.MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         Contato contato = listaContatos.get(position);
         holder.Nome.setText(contato.getNome());
         holder.email.setText(contato.getEmail());
@@ -46,7 +47,7 @@ public class ContatoAdap extends RecyclerView.Adapter<ContatoAdap.MyViewHolder> 
         public MyViewHolder(View itemView) {
             super(itemView);
 
-            Nome = itemView.findViewById(R.id.nomeCadastro);
+            Nome = itemView.findViewById(R.id.nome);
             email = itemView.findViewById(R.id.email);
             foto = itemView.findViewById(R.id.imageView);
         }

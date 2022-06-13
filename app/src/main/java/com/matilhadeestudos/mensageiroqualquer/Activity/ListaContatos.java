@@ -11,12 +11,13 @@ import com.matilhadeestudos.mensageiroqualquer.Adapter.ContatoAdap;
 import com.matilhadeestudos.mensageiroqualquer.Model.Contato;
 import com.matilhadeestudos.mensageiroqualquer.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ListaContatos extends AppCompatActivity {
 
     private RecyclerView recyclerView;
-    private List<Contato> listaContatos;
+    private List<Contato> listaContatos = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +42,7 @@ public class ListaContatos extends AppCompatActivity {
     public void prepararContatos() {
         Contato c = new Contato("Gabriel Gomes", "gabriel.zsloko@gmail.com", R.drawable.ic_baseline_account_circle_24);
         this.listaContatos.add(c);
-        c = new Contato("Lucas Duarte", "lucas.araujo@hotmail.com", R.drawable.ic_baseline_account_circle_24);
+        c = new Contato("Lucas Duarte", "lucas.araujo@hotmail.com", R.drawable.ic_baseline_add_circle_70);
         this.listaContatos.add(c);
         c = new Contato("Vinicius Clemente", "gabriel.zsloko@gmail.com", R.drawable.ic_baseline_account_circle_24);
         this.listaContatos.add(c);
