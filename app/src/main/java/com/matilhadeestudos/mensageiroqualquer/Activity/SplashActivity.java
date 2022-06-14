@@ -5,10 +5,8 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.matilhadeestudos.mensageiroqualquer.R;
-
 import java.util.TimerTask;
-
+import com.matilhadeestudos.mensageiroqualquer.R;
 public class SplashActivity extends AppCompatActivity {
 
 
