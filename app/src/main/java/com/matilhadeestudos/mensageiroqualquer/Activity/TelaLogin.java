@@ -11,6 +11,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.matilhadeestudos.mensageiroqualquer.Model.Usuario;
 import com.matilhadeestudos.mensageiroqualquer.R;
 
 import com.google.android.gms.tasks.OnCompleteListener;

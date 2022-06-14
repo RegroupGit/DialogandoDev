@@ -10,10 +10,9 @@
         <item name="colorSecondaryVariant">@color/teal_200</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor" tools:targetApi="l">#1E1919</item>
         <!-- Customize your theme here. -->
         <item name="android:background">#1E1919</item>
         <item name="android:textColor">@color/green</item>
-        <item name="android:button">@color/green</item>
     </style>
 </resources>
