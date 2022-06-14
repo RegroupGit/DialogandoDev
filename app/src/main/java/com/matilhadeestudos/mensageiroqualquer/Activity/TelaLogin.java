@@ -93,7 +93,7 @@ public class TelaLogin extends AppCompatActivity {
         startActivity(intent);
     }
 
-
+//
 
     public void logar() {
         mAuth.signInWithEmailAndPassword(u.getEmail(), u.getSenha())

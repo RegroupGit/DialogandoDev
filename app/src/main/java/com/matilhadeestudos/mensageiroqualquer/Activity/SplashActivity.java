@@ -12,7 +12,7 @@ public class SplashActivity extends AppCompatActivity {
 
 
 
-
+//
     TimerTask timerTask;
 
     @Override

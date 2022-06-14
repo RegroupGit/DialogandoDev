@@ -47,6 +47,6 @@ public class TelaTest extends AppCompatActivity {
         public String idConta() {
             String idUser = user.getUid();
             return idUser;
-
+//
         }
     }
