@@ -1,4 +1,4 @@
-package com.matilhadeestudos.mensageiroqualquer;
+package com.matilhadeestudos.mensageiroqualquer.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,7 +6,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.TimerTask;
-
+import com.matilhadeestudos.mensageiroqualquer.R;
 public class SplashActivity extends AppCompatActivity {
 
 

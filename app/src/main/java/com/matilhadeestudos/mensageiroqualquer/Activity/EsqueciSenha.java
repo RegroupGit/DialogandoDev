@@ -1,9 +1,9 @@
-package com.matilhadeestudos.mensageiroqualquer;
+package com.matilhadeestudos.mensageiroqualquer.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-
+import com.matilhadeestudos.mensageiroqualquer.R;
 public class EsqueciSenha extends AppCompatActivity {
 
     @Override
