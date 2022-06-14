@@ -7,17 +7,17 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.matilhadeestudos.mensageiroqualquer.Model.Usuario;
 import com.matilhadeestudos.mensageiroqualquer.R;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.matilhadeestudos.mensageiroqualquer.Activity.TelaCadastro;
 
 public class TelaLogin extends AppCompatActivity {
     Usuario nokia = new Usuario();
@@ -60,6 +60,8 @@ public class TelaLogin extends AppCompatActivity {
         testePontos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ListaContatos.class);
+                startActivity(intent);
                 //Intent intent = new Intent(getApplicationContext(), TelaDeConversas.class);
                // startActivity(intent);
             }
