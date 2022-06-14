@@ -1,4 +1,4 @@
-package com.matilhadeestudos.mensageiroqualquer.Activity;
+package com.matilhadeestudos.mensageiroqualquer.Model;
 
 public class Usuario {
         private String nome;
