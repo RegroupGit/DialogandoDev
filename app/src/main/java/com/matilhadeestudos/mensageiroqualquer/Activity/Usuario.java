@@ -1,11 +1,10 @@
 package com.matilhadeestudos.mensageiroqualquer.Activity;
 
 public class Usuario {
-        private String nome;
-        private String email;
-        private String senha;
-        private String id;
-
+    private String nome;
+    private String email;
+    private String senha;
+    private String id;
 
 
     public String getNome() {
@@ -39,16 +38,8 @@ public class Usuario {
     public void setId(String id) {
         this.id = id;
     }
-    public void salvarDadosdeRecuperacao(String senha,String email,String nome){
-        this.nome = nome;
-        this.email = email;
-        this.senha = senha;
-//        this.id = id;
 
-
+    public void salvarDados() {
+        //vai ser usado no futuro para salvar dados do usuario
     }
 }
-
-
-
-
