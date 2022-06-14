@@ -95,9 +95,8 @@ public class TelaCadastro extends AppCompatActivity {
     private void salvarDados(){
         referencia.child("usuarios").child(idConta()).child("dados_da_conta").child("nome").setValue(nomes.getText().toString());
         referencia.child("usuarios").child(idConta()).child("dados_da_conta").child("email").setValue(email.getText().toString());
-        referencia.child("usuarios").child(idConta()).child("dados_da_conta").child("senha").setValue(senha.getText().toString());
-        referencia.child("usuarios").child(idConta()).child("dados_da_conta").child("recuperar_senha").child("senha").setValue("senhaDohehehe");
-        referencia.child("usuarios").child(idConta()).child("dados_da_conta").child("recuperar_senha").child("email").setValue("hehehe@gmail.com");
+        referencia.child("usuarios").child(idConta()).child("dados_da_conta").child("recuperar_senha").child("senha").setValue(senha.getText().toString());
+        referencia.child("usuarios").child(idConta()).child("dados_da_conta").child("recuperar_senha").child("email").setValue(email.getText().toString());
     }
 
     private void recuperarDados(){
