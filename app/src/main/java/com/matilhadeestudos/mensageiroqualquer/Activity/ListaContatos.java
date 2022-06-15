@@ -7,10 +7,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.matilhadeestudos.mensageiroqualquer.Adapter.ContatoAdap;
 import com.matilhadeestudos.mensageiroqualquer.Adapter.RecenteAdap;
+import com.matilhadeestudos.mensageiroqualquer.Func.RecyclerItemClickListener;
 import com.matilhadeestudos.mensageiroqualquer.Model.Contato;
 import com.matilhadeestudos.mensageiroqualquer.Model.Recente;
 import com.matilhadeestudos.mensageiroqualquer.R;
@@ -49,6 +52,30 @@ public class ListaContatos extends AppCompatActivity {
         prepararContatos();
         adapterRecente = new RecenteAdap(listaRecentes);
         recyclerView.setAdapter(adapterRecente);
+
+        // Evento de Click
+        RecyclerItemClickListener lContatos = new RecyclerItemClickListener(getApplicationContext(), recyclerView, new RecyclerItemClickListener.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                Contato contato = listaContatos.get(position);
+                Toast.makeText(getApplicationContext(), "Você selecionou o contato: " + contato.getNome(), Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onLongItemClick(View view, int position) {
+                Contato contato = listaContatos.get(position);
+                Toast.makeText(getApplicationContext(), "Você tentou atualizar o contato: " + contato.getNome(), Toast.LENGTH_SHORT).show();
+
+            }
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+            }
+        });
+
+        recyclerView.addOnItemTouchListener(lContatos);
+
     }
 
     public void switchMensagens(View view) {
