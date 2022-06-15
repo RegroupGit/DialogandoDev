@@ -13,5 +13,8 @@
     <string name="enviar">Enviar</string>
     <string name="b_vindo">Bem Vindo!</string>
     <string name="A_cadastro">Preencha os dados abaixo para realizar o cadastro</string>
+    <string name="tmensagem">Mensagem</string>
+    <string name="switchMensagem">Mensagens/Contatos</string>
+    <string name="add_contato">Adicionar Contato</string>
 
 </resources>

@@ -6,9 +6,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.matilhadeestudos.mensageiroqualquer.Adapter.ContatoAdap;
+import com.matilhadeestudos.mensageiroqualquer.Adapter.RecenteAdap;
 import com.matilhadeestudos.mensageiroqualquer.Model.Contato;
+import com.matilhadeestudos.mensageiroqualquer.Model.Recente;
 import com.matilhadeestudos.mensageiroqualquer.R;
 
 import java.util.ArrayList;
@@ -17,7 +21,13 @@ import java.util.List;
 public class ListaContatos extends AppCompatActivity {
 
     private RecyclerView recyclerView;
+    private FloatingActionButton switch_b, add_button;
+
     private List<Contato> listaContatos = new ArrayList<>();
+    private List<Recente> listaRecentes = new ArrayList<>();
+    private boolean Contatos = true;
+    private ContatoAdap adapterContatos;
+    private RecenteAdap adapterRecente;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +35,8 @@ public class ListaContatos extends AppCompatActivity {
         setContentView(R.layout.activity_lista_contatos);
 
         recyclerView = findViewById(R.id.recyclerView);
+        switch_b = findViewById(R.id.switch_b);
+        add_button = findViewById(R.id.add_contato);
 
         //Definir Layout
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
@@ -33,24 +45,54 @@ public class ListaContatos extends AppCompatActivity {
         recyclerView.addItemDecoration(new DividerItemDecoration(this, 1));
 
         // definir adapter
+        prepararRecentes();
         prepararContatos();
-        ContatoAdap adapter = new ContatoAdap(listaContatos);
-        recyclerView.setAdapter(adapter);
+        adapterRecente = new RecenteAdap(listaRecentes);
+        recyclerView.setAdapter(adapterRecente);
+    }
+
+    public void switchMensagens(View view) {
+        if (!Contatos) {
+            adapterContatos = new ContatoAdap(listaContatos);
+            recyclerView.setAdapter(adapterContatos);
+            switch_b.setImageResource(R.drawable.ic_baseline_message_24);
+            add_button.setVisibility(View.VISIBLE);
+            Contatos = true;
+        } else {
+            adapterRecente = new RecenteAdap(listaRecentes);
+            recyclerView.setAdapter(adapterRecente);
+            switch_b.setImageResource(R.drawable.ic_baseline_contacts_24);
+            add_button.setVisibility(View.GONE);
+            Contatos = false;
+        }
     }
 
 
     public void prepararContatos() {
+        // Configurar o Firebase aqui!
+        // No momento, placeholders para não ficar vazio...
         Contato c = new Contato("Gabriel Gomes", "gabriel.zsloko@gmail.com", R.drawable.ic_baseline_account_circle_24);
-        this.listaContatos.add(c);
-        c = new Contato("Lucas Duarte", "lucas.araujo@hotmail.com", R.drawable.ic_baseline_add_circle_70);
-        this.listaContatos.add(c);
-        c = new Contato("Vinicius Clemente", "gabriel.zsloko@gmail.com", R.drawable.ic_baseline_account_circle_24);
-        this.listaContatos.add(c);
-        c = new Contato("Luana Aparecida", "gabriel.zsloko@gmail.com", R.drawable.ic_baseline_account_circle_24);
-        this.listaContatos.add(c);
-        c = new Contato("Everson Hernandes", "gabriel.zsloko@gmail.com", R.drawable.ic_baseline_account_circle_24);
-        this.listaContatos.add(c);
-        c = new Contato("Junior Bamba", "gabriel.zsloko@gmail.com", R.drawable.ic_baseline_account_circle_24);
-        this.listaContatos.add(c);
+        listaContatos.add(c);
+        c = new Contato("Lucas Duarte", "lucasd.araujo@hotmail.com", R.drawable.ic_baseline_add_circle_70);
+        listaContatos.add(c);
+        c = new Contato("Vinicius Clemente", "vinicius16044013@gmail.com", R.drawable.ic_baseline_message_24);
+        listaContatos.add(c);
+        c = new Contato("Luana Aparecida", "maximoffxstan@gmail.com", R.drawable.ic_baseline_contacts_24);
+        listaContatos.add(c);
+        c = new Contato("Everson Hernandes", "eversonh95@gmail.com", R.drawable.ic_baseline_message_24);
+        listaContatos.add(c);
+        c = new Contato("Junior Bamba", "????", R.drawable.ic_baseline_account_circle_24);
+        listaContatos.add(c);
+    }
+
+    public void prepararRecentes() {
+        // Configurar o Firebase aqui!
+        // No momento, placeholders para não ficar vazio...
+        Recente r = new Recente("Gabriel Gomes", "Estou a muito tempo sem fazer live .-.", R.drawable.ic_baseline_account_circle_24, "12:30");
+        listaRecentes.add(r);
+        r = new Recente("Lucas Duarte", "Esse Android está muito ruim!", R.drawable.ic_baseline_add_circle_70, "11:25");
+        listaRecentes.add(r);
+        r = new Recente("Vinicius Clemente", "Bora jogar FNAF Doom? Não consigo baixar outro jogo, pc tá sem memória", R.drawable.ic_baseline_message_24, "11:25");
+        listaRecentes.add(r);
     }
 }
