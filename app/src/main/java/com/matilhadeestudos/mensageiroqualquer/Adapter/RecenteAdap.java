@@ -27,7 +27,7 @@ public class RecenteAdap extends RecyclerView.Adapter<RecenteAdap.MyViewHolder> 
         public MyViewHolder(View itemView) {
             super(itemView);
 
-            nome = itemView.findViewById(R.id.nome);
+            nome = itemView.findViewById(R.id.nomeInfo);
             mensagem = itemView.findViewById(R.id.email);
             foto = itemView.findViewById(R.id.imageView);
             hora = itemView.findViewById(R.id.hora);

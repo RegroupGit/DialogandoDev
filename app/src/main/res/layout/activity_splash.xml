@@ -8,7 +8,7 @@
     tools:context=".Activity.SplashActivity">
 
     <TextView
-        android:id="@+id/nome"
+        android:id="@+id/nomeInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/logo_temp"

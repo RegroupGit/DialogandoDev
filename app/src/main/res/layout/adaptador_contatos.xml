@@ -22,7 +22,7 @@
         android:padding="5dp">
 
         <TextView
-            android:id="@+id/nome"
+            android:id="@+id/nomeInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/ubuntu_bold"
@@ -30,12 +30,5 @@
             android:textSize="16sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:text="Email"
-            android:textColor="@color/teal_700" />
     </LinearLayout>
 </LinearLayout>

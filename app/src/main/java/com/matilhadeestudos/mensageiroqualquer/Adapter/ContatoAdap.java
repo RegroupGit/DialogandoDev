@@ -31,7 +31,6 @@ public class ContatoAdap extends RecyclerView.Adapter<ContatoAdap.MyViewHolder> 
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         Contato contato = listaContatos.get(position);
         holder.Nome.setText(contato.getNome());
-        holder.email.setText(contato.getEmail());
         holder.foto.setImageResource(contato.getImagem());
     }
 
@@ -47,8 +46,7 @@ public class ContatoAdap extends RecyclerView.Adapter<ContatoAdap.MyViewHolder> 
         public MyViewHolder(View itemView) {
             super(itemView);
 
-            Nome = itemView.findViewById(R.id.nome);
-            email = itemView.findViewById(R.id.email);
+            Nome = itemView.findViewById(R.id.nomeInfo);
             foto = itemView.findViewById(R.id.imageView);
         }
     }

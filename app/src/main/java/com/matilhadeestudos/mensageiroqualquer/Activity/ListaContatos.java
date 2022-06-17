@@ -5,7 +5,9 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Toast;
@@ -64,7 +66,17 @@ public class ListaContatos extends AppCompatActivity {
             @Override
             public void onLongItemClick(View view, int position) {
                 Contato contato = listaContatos.get(position);
-                Toast.makeText(getApplicationContext(), "Você tentou atualizar o contato: " + contato.getNome(), Toast.LENGTH_SHORT).show();
+                String auxn = contato.getNome(), auxe = contato.getEmail();
+                int auxf = contato.getImagem();
+                Intent intent = new Intent(getApplicationContext(), UserInfo.class);
+                intent.putExtra("nome", auxn);
+                intent.putExtra("email", auxe);
+                intent.putExtra("foto", auxf);
+                intent.putExtra("contato", true);
+                startActivity(intent);
+
+                // Contato contato = listaContatos.get(position);
+                // Toast.makeText(getApplicationContext(), "Você tentou atualizar o contato: " + contato.getNome(), Toast.LENGTH_SHORT).show();
 
             }
 
