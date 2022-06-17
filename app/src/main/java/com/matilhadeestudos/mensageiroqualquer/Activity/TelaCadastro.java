@@ -32,11 +32,13 @@ public class TelaCadastro extends AppCompatActivity {
    private FirebaseAuth mAuth;
    private Usuario u;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_cadastro);
-
+        getSupportActionBar().hide();
         nomes = findViewById(R.id.nomeCadastro);
         email = findViewById(R.id.emailCadastro);
         senha = findViewById(R.id.senhaCadastro);

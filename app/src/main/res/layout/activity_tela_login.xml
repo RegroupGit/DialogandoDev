@@ -10,11 +10,10 @@
         android:id="@+id/entrar"
         style="@style/container_botao"
         android:layout_width="117dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="24dp"
+        android:layout_height="35dp"
         android:text="@string/entrar"
         android:textColor="#EAE7E7"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textforgetSenha"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
@@ -24,7 +23,6 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/shadows"
         android:elevation="14dp"
@@ -34,7 +32,7 @@
         app:layout_constraintBottom_toTopOf="@+id/entrar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email">
+        app:layout_constraintTop_toBottomOf="@+id/logo">
 
         <TextView
             android:id="@+id/textView4"
@@ -85,10 +83,9 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/email"
+        android:id="@+id/logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
         android:background="#0005ABFD"
         android:text="@string/logo_temp"
         android:textColor="#000000"
@@ -98,34 +95,33 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.42000002"
-        app:layout_constraintVertical_chainStyle="packed"
         tools:text="D/G" />
 
     <Button
         android:id="@+id/teste"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:text="@string/teste"
         android:textColor="#5BF3EE"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.086"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView
         android:id="@+id/textforgetSenha"
-        android:layout_width="0dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="254dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
         android:background="@color/corNull"
         android:minHeight="48dp"
         android:text="@string/e_senha"
         android:textAlignment="viewStart"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/buttonCadastro"
-        app:layout_constraintEnd_toStartOf="@+id/buttonCadastro"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -133,12 +129,13 @@
         style="@style/container_botao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="10dp"
         android:elevation="30dp"
         android:text="@string/registrar"
         android:textColor="#EAE7E7"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

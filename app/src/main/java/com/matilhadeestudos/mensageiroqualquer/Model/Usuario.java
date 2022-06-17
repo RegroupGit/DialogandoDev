@@ -40,6 +40,6 @@ public class Usuario {
     }
 
     public void salvarDados() {
-        //vai ser usado no futuro para salvar dados do usuario
+
     }
 }

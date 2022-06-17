@@ -9,6 +9,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.matilhadeestudos.mensageiroqualquer.Model.Contato;
 import com.matilhadeestudos.mensageiroqualquer.Model.Usuario;
 import com.matilhadeestudos.mensageiroqualquer.R;
@@ -22,6 +26,10 @@ public class UserInfo extends AppCompatActivity {
     private String nome, email;
     private FloatingActionButton fbutton;
     private int foto;
+
+    private final DatabaseReference referencia = FirebaseDatabase.getInstance().getReference();
+    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +47,6 @@ public class UserInfo extends AppCompatActivity {
         Email = findViewById(R.id.emailInfo);
         Foto = findViewById(R.id.fotoInfo);
         fbutton = findViewById(R.id.floatingActionButton);
-
         Nome.setText(nome);
         Email.setText(email);
         Foto.setImageResource(foto);

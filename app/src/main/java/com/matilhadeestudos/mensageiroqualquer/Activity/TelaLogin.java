@@ -111,7 +111,9 @@ public class TelaLogin extends AppCompatActivity {
                     }
                 });
     }
+       public void recuperarSenha(){
 
+       }
     private void receberDados() {
 
         u.setEmail(email.getText().toString());
