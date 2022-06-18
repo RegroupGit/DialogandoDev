@@ -47,7 +47,8 @@ public class TelaLogin extends AppCompatActivity {
         testePontos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), ListaContatos.class);
+                Intent intent = new Intent(getApplicationContext(), UserInfo.class);
+                intent.putExtra("contato", false);
                 startActivity(intent);
             }
         });

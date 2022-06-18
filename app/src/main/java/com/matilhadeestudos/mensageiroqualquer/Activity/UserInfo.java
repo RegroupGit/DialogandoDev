@@ -38,10 +38,13 @@ public class UserInfo extends AppCompatActivity {
         getSupportActionBar().hide();
 
         Intent intent = getIntent();
-        nome = intent.getStringExtra("nome");
-        email = intent.getStringExtra("email");
-        foto = intent.getIntExtra("foto", R.drawable.ic_baseline_account_circle_24);
         contato = intent.getBooleanExtra("contato", true);
+        if (contato) {
+            Contato c = (Contato) intent.getSerializableExtra("usuario");
+            nome = c.getNome();
+            email = c.getEmail();
+            foto = c.getImagem();
+        }
 
         Nome = findViewById(R.id.nomeInfo);
         Email = findViewById(R.id.emailInfo);

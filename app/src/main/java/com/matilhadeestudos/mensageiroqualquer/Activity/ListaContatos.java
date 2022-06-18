@@ -5,7 +5,9 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.view.View;
@@ -34,6 +36,7 @@ public class ListaContatos extends AppCompatActivity {
     private ContatoAdap adapterContatos;
     private RecenteAdap adapterRecente;
 
+    @SuppressLint("ResourceAsColor")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +45,7 @@ public class ListaContatos extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerView);
         switch_b = findViewById(R.id.switch_b);
         add_button = findViewById(R.id.add_contato);
+
 
         //Definir Layout
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
@@ -69,10 +73,8 @@ public class ListaContatos extends AppCompatActivity {
                 String auxn = contato.getNome(), auxe = contato.getEmail();
                 int auxf = contato.getImagem();
                 Intent intent = new Intent(getApplicationContext(), UserInfo.class);
-                intent.putExtra("nome", auxn);
-                intent.putExtra("email", auxe);
-                intent.putExtra("foto", auxf);
                 intent.putExtra("contato", true);
+                intent.putExtra("usuario", contato);
                 startActivity(intent);
 
                 // Contato contato = listaContatos.get(position);

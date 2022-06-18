@@ -1,6 +1,8 @@
 package com.matilhadeestudos.mensageiroqualquer.Model;
 
-public class Contato {
+import java.io.Serializable;
+
+public class Contato implements Serializable {
     private String Nome, email;
     private int imagem;
 
