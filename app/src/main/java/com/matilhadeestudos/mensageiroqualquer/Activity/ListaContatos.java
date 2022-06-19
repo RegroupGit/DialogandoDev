@@ -20,6 +20,13 @@ import android.widget.AdapterView;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.matilhadeestudos.mensageiroqualquer.Adapter.ContatoAdap;
 import com.matilhadeestudos.mensageiroqualquer.Adapter.RecenteAdap;
 import com.matilhadeestudos.mensageiroqualquer.Func.RecyclerItemClickListener;
@@ -34,7 +41,8 @@ public class ListaContatos extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private FloatingActionButton switch_b, add_button;
-
+    private DatabaseReference referencia = FirebaseDatabase.getInstance().getReference();
+    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
     private List<Contato> listaContatos = new ArrayList<>();
     private List<Recente> listaRecentes = new ArrayList<>();
     private boolean Contatos = true;
@@ -47,6 +55,11 @@ public class ListaContatos extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_contatos);
 //        getSupportActionBar().hide();
+
+
+
+
+
 
         recyclerView = findViewById(R.id.recyclerView);
         switch_b = findViewById(R.id.switch_b);
@@ -100,6 +113,10 @@ public class ListaContatos extends AppCompatActivity {
         recyclerView.addOnItemTouchListener(lContatos);
 
     }
+
+
+
+
 
     public void switchMensagens(View view) {
         if (!Contatos) {
@@ -180,4 +197,7 @@ public class ListaContatos extends AppCompatActivity {
         intent.putExtra("contato", false);
         startActivity(intent);
     }
+
+
+
 }

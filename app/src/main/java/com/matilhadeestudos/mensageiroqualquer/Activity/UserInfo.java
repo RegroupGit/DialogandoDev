@@ -1,6 +1,7 @@
 package com.matilhadeestudos.mensageiroqualquer.Activity;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatToggleButton;
 
@@ -15,6 +16,7 @@ import android.widget.Toast;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -36,10 +38,9 @@ public class UserInfo extends AppCompatActivity {
     private FirebaseAuth auth;
     private FirebaseUser usuario;
     private FirebaseDatabase bd;
-
+    String nomeDoBd;
     private final DatabaseReference referencia = FirebaseDatabase.getInstance().getReference();
     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-    DatabaseReference nome_db = referencia.child("usuarios").child(user.getUid()).child("dados_da_conta").child("nome");
 
 
 
@@ -47,26 +48,27 @@ public class UserInfo extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_info);
+
+
+        Nome = findViewById(R.id.nomeInfo);
+        Email = findViewById(R.id.emailInfo);
+        Foto = findViewById(R.id.fotoInfo);
+        fbutton = findViewById(R.id.floatingActionButton);
+        Email.setText(email);
+        Foto.setImageResource(foto);
+
         getSupportActionBar().hide();
 
-        Intent intent = getIntent();
-        contato = intent.getBooleanExtra("contato", true);
+        DatabaseReference nomeBD1 = referencia.child("usuarios").child(idConta()).child("dados_da_conta");
+        DatabaseReference emailBD1 = referencia.child("usuarios").child(idConta()).child("dados_da_conta");
 
-        auth = FirebaseAuth.getInstance();
-        user = auth.getCurrentUser();
-
-
-        if (contato) {
-            Contato c = (Contato) intent.getSerializableExtra("usuario");
-            nome = c.getNome();
-            email = c.getEmail();
-            foto = c.getImagem();
-        } else {
-            nome_db.addValueEventListener(new ValueEventListener() {
+        nomeBD1.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String n = dataSnapshot.getValue().toString();
-                nome = n;
+               String nomis = dataSnapshot.child("nome").getValue(String.class);
+               Nome.setText(nomis);
+                System.out.println(nomis);
+
             }
 
             @Override
@@ -74,16 +76,35 @@ public class UserInfo extends AppCompatActivity {
 
             }
         });
-            email = user.getEmail();
+
+        emailBD1.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+               String nomis = dataSnapshot.child("email").getValue(String.class);
+               Email.setText(nomis);
+                System.out.println(nomis);
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+        Intent intent = getIntent();
+        contato = intent.getBooleanExtra("contato", true);
+
+           if (contato) {
+            Contato c = (Contato) intent.getSerializableExtra("usuario");
+          //  nome = c.getNome();
+            email = c.getEmail();
+            foto = c.getImagem();
+        } else {
+
+
         }
 
-        Nome = findViewById(R.id.nomeInfo);
-        Email = findViewById(R.id.emailInfo);
-        Foto = findViewById(R.id.fotoInfo);
-        fbutton = findViewById(R.id.floatingActionButton);
-        Nome.setText(nome);
-        Email.setText(email);
-        Foto.setImageResource(foto);
 
         if (contato) {
             fbutton.setImageResource(R.drawable.ic_baseline_edit_48);
@@ -107,6 +128,16 @@ public class UserInfo extends AppCompatActivity {
             }
 
         }
+    }
+
+    public String idConta() {
+
+
+        String IdUser = user.getUid();
+
+        return IdUser;
+
+
     }
 
 }

@@ -14,7 +14,9 @@ import com.matilhadeestudos.mensageiroqualquer.Model.Usuario;
 import com.matilhadeestudos.mensageiroqualquer.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+
 //import com.google.android.material.textfield.TextInputEditText;
+
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -49,9 +51,11 @@ public class TelaCadastro extends AppCompatActivity {
     enviar.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
+
             recuperarDados();
 
             criarLogin();
+
         }
     });
 
@@ -65,6 +69,7 @@ public class TelaCadastro extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
                             FirebaseUser user = mAuth.getCurrentUser();
+                            System.out.println(user);
                             logar();
                             //startActivity(new Intent(TelaCadastro.this, ListaContatos.class));
                         }else{
