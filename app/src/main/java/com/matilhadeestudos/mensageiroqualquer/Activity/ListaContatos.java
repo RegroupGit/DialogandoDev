@@ -1,5 +1,6 @@
 package com.matilhadeestudos.mensageiroqualquer.Activity;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.DividerItemDecoration;
@@ -13,6 +14,7 @@ import android.os.Bundle;
 import android.os.Parcelable;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Toast;
@@ -44,14 +46,14 @@ public class ListaContatos extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_contatos);
-        getSupportActionBar().hide();
+//        getSupportActionBar().hide();
 
         recyclerView = findViewById(R.id.recyclerView);
         switch_b = findViewById(R.id.switch_b);
         add_button = findViewById(R.id.add_contato);
 
-        Toolbar toolbar = findViewById(R.id.toolbarPrincipal);
-        toolbar.setTitle(R.string.app_name);
+//        Toolbar toolbar = findViewById(R.id.toolbarPrincipal);
+//        toolbar.setTitle(R.string.app_name);
 
 
         //Definir Layout
@@ -148,6 +150,34 @@ public class ListaContatos extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_principal, menu);
+
+        MenuItem minhaConta = menu.findItem(R.id.minhaConta);
+        minhaConta.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                Intent intent = new Intent(getApplicationContext(), UserInfo.class);
+                intent.putExtra("contato", false);
+                startActivity(intent);
+                return true;
+            }
+        });
+
         return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch(item.getItemId()) {
+            case R.id.minhaConta:
+                MinhaConta();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    public void MinhaConta() {
+        Intent intent = new Intent(getApplicationContext(), UserInfo.class);
+        intent.putExtra("contato", false);
+        startActivity(intent);
     }
 }

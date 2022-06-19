@@ -125,7 +125,7 @@ public class TelaLogin extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        FirebaseUser usuarioAtual= mAuth.getCurrentUser();
+        FirebaseUser usuarioAtual = mAuth.getCurrentUser();
         if (usuarioAtual != null) {
             gotoListaMensagens();
         }
@@ -134,7 +134,6 @@ public class TelaLogin extends AppCompatActivity {
     private void gotoListaMensagens() {
         Intent intent = new Intent(getApplicationContext(), ListaContatos.class);
         startActivity(intent);
-        finish();
     }
 
 }

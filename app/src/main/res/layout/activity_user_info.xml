@@ -36,6 +36,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:clickable="true"
+        android:onClick="ClickFloating"
         android:src="@drawable/ic_baseline_edit_48"
         android:tint="@color/blue"
         app:layout_constraintBottom_toBottomOf="parent"

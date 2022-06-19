@@ -26,7 +26,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="28dp"
         android:fontFamily="sans-serif"
-        android:text="By Rregroup"
+        android:text="By Regroup"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="18sp"
