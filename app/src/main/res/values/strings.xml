@@ -16,5 +16,6 @@
     <string name="tmensagem">Mensagem</string>
     <string name="switchMensagem">Mensagens/Contatos</string>
     <string name="add_contato">Adicionar Contato</string>
+    <string name="minha_conta">Minha Conta</string>
 
 </resources>

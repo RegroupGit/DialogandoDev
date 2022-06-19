@@ -1,6 +1,7 @@
 package com.matilhadeestudos.mensageiroqualquer.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -10,6 +11,8 @@ import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Toast;
@@ -41,10 +44,14 @@ public class ListaContatos extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_contatos);
+        getSupportActionBar().hide();
 
         recyclerView = findViewById(R.id.recyclerView);
         switch_b = findViewById(R.id.switch_b);
         add_button = findViewById(R.id.add_contato);
+
+        Toolbar toolbar = findViewById(R.id.toolbarPrincipal);
+        toolbar.setTitle(R.string.app_name);
 
 
         //Definir Layout
@@ -135,5 +142,12 @@ public class ListaContatos extends AppCompatActivity {
         listaRecentes.add(r);
         r = new Recente("Vinicius Clemente", "Bora jogar FNAF Doom? Não consigo baixar outro jogo, pc tá sem memória", R.drawable.ic_baseline_message_24, "11:25");
         listaRecentes.add(r);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_principal, menu);
+        return super.onCreateOptionsMenu(menu);
     }
 }

@@ -29,5 +29,11 @@
 
     </style>
 
+    <style name="toolbar" parent="Theme.Mensageiroqualquer">
+        <item name="android:textColorPrimary">?attr/colorButtonNormal</item>
+        <item name="android:backgroundTint">?android:background</item>
+        <item name="tint">?attr/tint</item>
+    </style>
+
 
 </resources>

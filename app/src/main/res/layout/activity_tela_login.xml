@@ -10,10 +10,11 @@
         android:id="@+id/entrar"
         style="@style/container_botao"
         android:layout_width="117dp"
-        android:layout_height="35dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
         android:text="@string/entrar"
         android:textColor="#EAE7E7"
-        app:layout_constraintBottom_toTopOf="@+id/textforgetSenha"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
@@ -23,6 +24,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/shadows"
         android:elevation="14dp"
@@ -38,10 +40,11 @@
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="4dp"
             android:background="@color/corNull"
             android:elevation="36dp"
-            android:text="@string/email"
-            android:textColor="@color/black" />
+            android:text="@string/email" />
 
         <EditText
             android:id="@+id/email"
@@ -50,22 +53,21 @@
             android:layout_height="48dp"
             android:autofillHints=""
             android:background="@drawable/cointainer_text_input"
-            android:backgroundTint="@color/caixaTextoCointeirnes"
-            android:elevation="36dp"
             android:ems="10"
             android:hint="@string/email"
+            android:padding="10dp"
             android:inputType="textEmailAddress"
-            android:textColorHint="#9F9191"
             tools:ignore="TextContrastCheck,DuplicateSpeakableTextCheck" />
 
         <TextView
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"
             android:background="@color/corNull"
-            android:elevation="36dp"
-            android:text="@string/senha"
-            android:textColor="@color/black" />
+            android:text="@string/senha" />
 
         <EditText
             android:id="@+id/senha"
@@ -73,12 +75,10 @@
             android:layout_height="48dp"
             android:autofillHints=""
             android:background="@drawable/cointainer_text_input"
-            android:backgroundTint="@color/caixaTextoCointeirnes"
-            android:elevation="35dp"
             android:ems="10"
             android:hint="@string/senha"
             android:inputType="textPassword"
-            android:textColorHint="#9F9191"
+            android:padding="10dp"
             tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck,TouchTargetSizeCheck" />
     </LinearLayout>
 
@@ -86,42 +86,43 @@
         android:id="@+id/logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
         android:background="#0005ABFD"
         android:text="@string/logo_temp"
-        android:textColor="#000000"
         android:textSize="50sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.41000003"
+        app:layout_constraintVertical_chainStyle="packed"
         tools:text="D/G" />
 
     <Button
         android:id="@+id/teste"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:text="@string/teste"
         android:textColor="#5BF3EE"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.086"
         app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView
         android:id="@+id/textforgetSenha"
         android:layout_width="254dp"
         android:layout_height="34dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginStart="16dp"
         android:background="@color/corNull"
         android:minHeight="48dp"
         android:text="@string/e_senha"
         android:textAlignment="viewStart"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonCadastro"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -129,7 +130,8 @@
         style="@style/container_botao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:elevation="30dp"
         android:text="@string/registrar"
         android:textColor="#EAE7E7"

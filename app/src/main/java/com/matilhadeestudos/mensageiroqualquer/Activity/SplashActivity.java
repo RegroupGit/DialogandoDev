@@ -6,11 +6,10 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.TimerTask;
+
+
 import com.matilhadeestudos.mensageiroqualquer.R;
 public class SplashActivity extends AppCompatActivity {
-
-
-
 
 //
     TimerTask timerTask;
@@ -19,9 +18,6 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-
-
-
 
         getSupportActionBar().hide();
 
@@ -43,8 +39,6 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     private void gotoMainActivity() {
-
-
         Intent intent = new Intent(getApplicationContext(), TelaLogin.class);
         startActivity(intent);
         finish();

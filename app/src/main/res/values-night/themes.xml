@@ -2,17 +2,21 @@
     <!-- Base application theme. -->
     <style name="Theme.Mensageiroqualquer" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryVariant">@color/purple_500</item>
+        <item name="colorPrimary">#2B2B2B</item>
+        <item name="colorPrimaryVariant">#232323</item>
         <item name="colorOnPrimary">@color/black</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorSecondary">@color/green</item>
+        <item name="colorSecondaryVariant">#1E1919</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">#1E1919</item>
         <!-- Customize your theme here. -->
         <item name="android:background">#1E1919</item>
+        <item name="tint">@color/green</item>
         <item name="android:textColor">@color/green</item>
+        <item name="colorButtonNormal">@color/green</item>
+        <item name="buttonTint">@color/green</item>
+        <item name="android:textColorPrimary">@color/green</item>
     </style>
 </resources>

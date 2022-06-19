@@ -121,4 +121,20 @@ public class TelaLogin extends AppCompatActivity {
         u.setSenha(senha.getText().toString());
 
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser usuarioAtual= mAuth.getCurrentUser();
+        if (usuarioAtual != null) {
+            gotoListaMensagens();
+        }
+    }
+
+    private void gotoListaMensagens() {
+        Intent intent = new Intent(getApplicationContext(), ListaContatos.class);
+        startActivity(intent);
+        finish();
+    }
+
 }
