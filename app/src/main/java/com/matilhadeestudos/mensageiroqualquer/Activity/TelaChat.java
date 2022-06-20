@@ -77,9 +77,9 @@ public class TelaChat extends AppCompatActivity {
 
     public void switchResp(View v) {
         if (aSwitch.isChecked()) {
-            aSwitch.setText("Destinatario");
+            aSwitch.setText("Vinicius");
         } else {
-            aSwitch.setText("Remetente");
+            aSwitch.setText("Gabriel");
         }
     }
 
@@ -93,6 +93,13 @@ public class TelaChat extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         mensagensref.removeEventListener(mensagensListener);
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        mensagensref.removeEventListener(mensagensListener);
+
     }
 
     public void recuperarMsg () {
