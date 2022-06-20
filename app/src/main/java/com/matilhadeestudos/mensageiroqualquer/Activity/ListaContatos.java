@@ -86,7 +86,9 @@ public class ListaContatos extends AppCompatActivity {
             @Override
             public void onItemClick(View view, int position) {
                 Contato contato = listaContatos.get(position);
-                Toast.makeText(getApplicationContext(), "Você selecionou o contato: " + contato.getNome(), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), "Você selecionou o contato: " + contato.getNome(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), TelaChat.class);
+                startActivity(intent);
             }
 
             @Override
@@ -98,7 +100,7 @@ public class ListaContatos extends AppCompatActivity {
                 intent.putExtra("contato", true);
                 intent.putExtra("usuario", contato);
                 startActivity(intent);
-                finish();
+                //finish();
 
                 // Contato contato = listaContatos.get(position);
                 // Toast.makeText(getApplicationContext(), "Você tentou atualizar o contato: " + contato.getNome(), Toast.LENGTH_SHORT).show();
@@ -176,7 +178,7 @@ public class ListaContatos extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), UserInfo.class);
                 intent.putExtra("contato", false);
                 startActivity(intent);
-                finish();
+                //finish();
                 return true;
             }
         });
@@ -184,23 +186,23 @@ public class ListaContatos extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch(item.getItemId()) {
-            case R.id.minhaConta:
-                MinhaConta();
-                break;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    public void MinhaConta() {
-
-        Intent intent = new Intent(getApplicationContext(), UserInfo.class);
-        intent.putExtra("contato", false);
-        startActivity(intent);
-        finish();
-    }
+//    @Override
+//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+//        switch(item.getItemId()) {
+//            case R.id.minhaConta:
+//                MinhaConta();
+//                break;
+//        }
+//        return super.onOptionsItemSelected(item);
+//    }
+//
+//    public void MinhaConta() {
+//
+//        Intent intent = new Intent(getApplicationContext(), UserInfo.class);
+//        intent.putExtra("contato", false);
+//        startActivity(intent);
+//        finish();
+//    }
 
 
 
