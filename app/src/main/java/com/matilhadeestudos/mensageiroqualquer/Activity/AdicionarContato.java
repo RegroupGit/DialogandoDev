@@ -36,7 +36,7 @@ public class AdicionarContato extends AppCompatActivity {
                     Contato c = new Contato();
                     c.setNome(nome.getText().toString());
                     c.setEmail(email.getText().toString());
-                    Firebase.salvarContato(c);
+                    // Firebase.salvarContato(c);
                     finish();
                 }
             }
