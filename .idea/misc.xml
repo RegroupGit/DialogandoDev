@@ -15,6 +15,7 @@
         <entry key="..\:/android user/DialogandoDev/app/src/main/res/drawable/filtro_tela_login.xml" value="0.231" />
         <entry key="..\:/android user/DialogandoDev/app/src/main/res/drawable/shadows.xml" value="0.23" />
         <entry key="..\:/android user/DialogandoDev/app/src/main/res/drawable/textinput.xml" value="0.117" />
+        <entry key="..\:/android user/DialogandoDev/app/src/main/res/layout/activity_adicionar_contato.xml" value="0.2" />
         <entry key="..\:/android user/DialogandoDev/app/src/main/res/layout/activity_area_usuario.xml" value="0.2" />
         <entry key="..\:/android user/DialogandoDev/app/src/main/res/layout/activity_esqueci_senha.xml" value="0.22" />
         <entry key="..\:/android user/DialogandoDev/app/src/main/res/layout/activity_esqueci_senha2.xml" value="0.1" />
@@ -23,7 +24,7 @@
         <entry key="..\:/android user/DialogandoDev/app/src/main/res/layout/activity_tela_cadastro.xml" value="0.2265625" />
         <entry key="..\:/android user/DialogandoDev/app/src/main/res/layout/activity_tela_login.xml" value="0.25" />
         <entry key="..\:/android user/DialogandoDev/app/src/main/res/layout/activity_tela_test.xml" value="0.1" />
-        <entry key="..\:/android user/DialogandoDev/app/src/main/res/layout/activity_user_info.xml" value="0.19583333333333333" />
+        <entry key="..\:/android user/DialogandoDev/app/src/main/res/layout/activity_user_info.xml" value="0.1" />
         <entry key="..\:/android user/DialogandoDev/app/src/main/res/layout/adaptador_contatos.xml" value="0.2" />
         <entry key="..\:/android user/DialogandoDev/app/src/main/res/layout/test_tela.xml" value="0.1" />
         <entry key="..\:/android user/DialogandoDev/app/src/main/res/layout/toolbar.xml" value="0.2" />

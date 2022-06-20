@@ -13,7 +13,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.ChildEventListener;
@@ -29,31 +32,36 @@ import com.matilhadeestudos.mensageiroqualquer.R;
 public class UserInfo extends AppCompatActivity {
     private boolean contato = true;
     private Contato c;
-    private Usuario u;
+    private Usuario u = new Usuario();
     private TextView Nome, Email;
     private ImageView Foto;
     private String nome, email;
-    private FloatingActionButton fbutton;
+    private FloatingActionButton fbutton,botaoSair;
     private int foto;
-    private FirebaseAuth auth;
-    private FirebaseUser usuario;
+    private FirebaseAuth mAuth;
+
+    //private FirebaseUser usuario;
     private FirebaseDatabase bd;
     String nomeDoBd;
     private final DatabaseReference referencia = FirebaseDatabase.getInstance().getReference();
     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
+    TelaLogin telaLogin = new TelaLogin();
 
+
+    public UserInfo() {
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_info);
 
-
+        mAuth = FirebaseAuth.getInstance();
         Nome = findViewById(R.id.nomeInfo);
         Email = findViewById(R.id.emailInfo);
         Foto = findViewById(R.id.fotoInfo);
-        fbutton = findViewById(R.id.floatingActionButton);
+        fbutton = findViewById(R.id.botaoSair);
         Email.setText(email);
         Foto.setImageResource(foto);
 
@@ -66,7 +74,7 @@ public class UserInfo extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                String nomis = dataSnapshot.child("nome").getValue(String.class);
-               Nome.setText(nomis);
+               Nome.setText(nomis );
                 System.out.println(nomis);
 
             }
@@ -92,11 +100,11 @@ public class UserInfo extends AppCompatActivity {
             }
         });
 
-        Intent intent = getIntent();
-        contato = intent.getBooleanExtra("contato", true);
+        final Intent[] intent = {getIntent()};
+        contato = intent[0].getBooleanExtra("contato", true);
 
            if (contato) {
-            Contato c = (Contato) intent.getSerializableExtra("usuario");
+            Contato c = (Contato) intent[0].getSerializableExtra("usuario");
           //  nome = c.getNome();
             email = c.getEmail();
             foto = c.getImagem();
@@ -112,23 +120,34 @@ public class UserInfo extends AppCompatActivity {
             fbutton.setImageResource(R.drawable.ic_baseline_exit_to_app_48);
         }
 
+            fbutton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (contato) {
+                        Toast.makeText( UserInfo.this , "Função pendente!", Toast.LENGTH_SHORT).show();
+                    } else {
+                        try {
+
+                            Nome.setText("Deslogado");
+                            Email.setText("Deslogado");
+
+                            deslogar();
+                            startActivity(new Intent(getApplicationContext(), TelaLogin.class));
+
+                            finish();
+
+
+
+                        } catch (Exception e) {
+                            System.out.println("falhou cara ve ai novamente");
+                        }
+
+                    }
+
+                }
+            });
     }
 
-    public void ClickFloating(View view) {
-        if (contato) {
-            Toast.makeText(this, "Função pendente!", Toast.LENGTH_SHORT).show();
-        } else {
-            try {
-                auth.signOut();
-                Thread.sleep(1000);
-                System.exit(0);
-
-            } catch (Exception e) {
-                System.out.println(e);
-            }
-
-        }
-    }
 
     public String idConta() {
 
@@ -138,6 +157,9 @@ public class UserInfo extends AppCompatActivity {
         return IdUser;
 
 
+    }
+    public void deslogar(){
+        mAuth.signOut();
     }
 
 }

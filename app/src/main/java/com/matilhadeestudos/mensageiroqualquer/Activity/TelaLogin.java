@@ -25,7 +25,7 @@ public class TelaLogin extends AppCompatActivity {
 
     private EditText email, senha;
     private FirebaseAuth mAuth;
-    Button cadastroButton, entrada, testePontos;
+    Button cadastroButton, entrada, testePontos, deslogar;
     TextView esqueceuSenha;
     Usuario u = new Usuario();
 
@@ -106,6 +106,7 @@ public class TelaLogin extends AppCompatActivity {
                             u.setId(user.getUid());
                             u.salvarDados();
                             startActivity(new Intent(TelaLogin.this, ListaContatos.class));
+                            finish();
                         }else{
                             Toast.makeText(TelaLogin.this,"Erro ao autenticar/Conta não existe",Toast.LENGTH_LONG).show();
                         }
@@ -115,25 +116,14 @@ public class TelaLogin extends AppCompatActivity {
        public void recuperarSenha(){
 
        }
+
+       public void deslogar(){
+        mAuth.signOut();
+       }
     private void receberDados() {
 
         u.setEmail(email.getText().toString());
         u.setSenha(senha.getText().toString());
 
     }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        FirebaseUser usuarioAtual = mAuth.getCurrentUser();
-        if (usuarioAtual != null) {
-            gotoListaMensagens();
-        }
-    }
-
-    private void gotoListaMensagens() {
-        Intent intent = new Intent(getApplicationContext(), ListaContatos.class);
-        startActivity(intent);
-    }
-
 }

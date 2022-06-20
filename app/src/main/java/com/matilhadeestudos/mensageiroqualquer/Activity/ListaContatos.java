@@ -98,6 +98,7 @@ public class ListaContatos extends AppCompatActivity {
                 intent.putExtra("contato", true);
                 intent.putExtra("usuario", contato);
                 startActivity(intent);
+                finish();
 
                 // Contato contato = listaContatos.get(position);
                 // Toast.makeText(getApplicationContext(), "Você tentou atualizar o contato: " + contato.getNome(), Toast.LENGTH_SHORT).show();
@@ -175,6 +176,7 @@ public class ListaContatos extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), UserInfo.class);
                 intent.putExtra("contato", false);
                 startActivity(intent);
+                finish();
                 return true;
             }
         });
@@ -193,9 +195,11 @@ public class ListaContatos extends AppCompatActivity {
     }
 
     public void MinhaConta() {
+
         Intent intent = new Intent(getApplicationContext(), UserInfo.class);
         intent.putExtra("contato", false);
         startActivity(intent);
+        finish();
     }
 
 
