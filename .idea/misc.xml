@@ -3,6 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/gabri/AndroidStudioProjects/DialogandoDev/app/src/main/res/drawable/shadows.xml" value="0.1585" />
+        <entry key="..\:/Users/gabri/AndroidStudioProjects/DialogandoDev/app/src/main/res/layout/activity_adicionar_contato.xml" value="0.33" />
+        <entry key="..\:/Users/gabri/AndroidStudioProjects/DialogandoDev/app/src/main/res/layout/activity_chat.xml" value="0.38697916666666665" />
+        <entry key="..\:/Users/gabri/AndroidStudioProjects/DialogandoDev/app/src/main/res/layout/activity_lista_contatos.xml" value="0.35555555555555557" />
+        <entry key="..\:/Users/gabri/AndroidStudioProjects/DialogandoDev/app/src/main/res/layout/activity_splash.xml" value="0.38697916666666665" />
+        <entry key="..\:/Users/gabri/AndroidStudioProjects/DialogandoDev/app/src/main/res/layout/activity_tela_chat.xml" value="0.38697916666666665" />
+        <entry key="..\:/Users/gabri/AndroidStudioProjects/DialogandoDev/app/src/main/res/layout/activity_user_info.xml" value="0.2015625" />
+        <entry key="..\:/Users/gabri/AndroidStudioProjects/DialogandoDev/app/src/main/res/layout/content_tela_chat.xml" value="0.38697916666666665" />
+        <entry key="..\:/Users/gabri/AndroidStudioProjects/DialogandoDev/app/src/main/res/layout/fragment_first.xml" value="0.38697916666666665" />
+        <entry key="..\:/Users/gabri/AndroidStudioProjects/DialogandoDev/app/src/main/res/layout/fragment_second.xml" value="0.38697916666666665" />
+        <entry key="..\:/Users/gabri/AndroidStudioProjects/DialogandoDev/app/src/main/res/layout/toolbar.xml" value="0.38697916666666665" />
+        <entry key="..\:/Users/gabri/AndroidStudioProjects/DialogandoDev/app/src/main/res/menu/menu_principal.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/gabri/AndroidStudioProjects/Mensageiroqualquer/app/src/main/res/layout/activity_lista_contatos.xml" value="0.22" />
         <entry key="..\:/Users/gabri/AndroidStudioProjects/Mensageiroqualquer/app/src/main/res/layout/activity_main.xml" value="0.2975630611372381" />
         <entry key="..\:/Users/gabri/AndroidStudioProjects/Mensageiroqualquer/app/src/main/res/layout/adaptador_contatos.xml" value="0.33" />
