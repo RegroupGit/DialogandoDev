@@ -62,55 +62,63 @@ public class UserInfo extends AppCompatActivity {
         DatabaseReference nomeBD1 = referencia.child("usuarios").child(idConta()).child("dados_da_conta");
         DatabaseReference emailBD1 = referencia.child("usuarios").child(idConta()).child("dados_da_conta");
 
-        nomeBD1.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-               String nomis = dataSnapshot.child("nome").getValue(String.class);
-               Nome.setText(nomis);
-                System.out.println(nomis);
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-
-        emailBD1.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-               String nomis = dataSnapshot.child("email").getValue(String.class);
-               Email.setText(nomis);
-                System.out.println(nomis);
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-
         Intent intent = getIntent();
         contato = intent.getBooleanExtra("contato", true);
 
-           if (contato) {
-            Contato c = (Contato) intent.getSerializableExtra("usuario");
-          //  nome = c.getNome();
-            email = c.getEmail();
-            foto = c.getImagem();
-        } else {
+       if (contato) {
+           try {
+               Contato c = (Contato) intent.getSerializableExtra("usuario");
+               nome = c.getNome();
+               email = c.getEmail();
+               foto = c.getImagem();
+           } catch (Exception e) {
+               nome = "Nome";
+               email = "email";
+               foto = R.drawable.ic_baseline_account_circle_24;
+           }
+
+       } else {
+          nomeBD1.addListenerForSingleValueEvent(new ValueEventListener() {
+              @Override
+              public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                  String nomis = dataSnapshot.child("nome").getValue(String.class);
+                  nome = nomis;
+                  System.out.println(nomis);
+
+              }
+
+              @Override
+              public void onCancelled(@NonNull DatabaseError databaseError) {
+
+              }
+          });
+
+          emailBD1.addListenerForSingleValueEvent(new ValueEventListener() {
+              @Override
+              public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                  String nomis = dataSnapshot.child("email").getValue(String.class);
+                  email = nomis;
+                  System.out.println(nomis);
+
+              }
+
+              @Override
+              public void onCancelled(@NonNull DatabaseError databaseError) {
+
+              }
+          });
+       }
 
 
-        }
+       if (contato) {
+           fbutton.setImageResource(R.drawable.ic_baseline_edit_48);
+       } else {
+           fbutton.setImageResource(R.drawable.ic_baseline_exit_to_app_48);
+       }
 
-
-        if (contato) {
-            fbutton.setImageResource(R.drawable.ic_baseline_edit_48);
-        } else {
-            fbutton.setImageResource(R.drawable.ic_baseline_exit_to_app_48);
-        }
+       Nome.setText(nome);
+       Email.setText(email);
+       Foto.setImageResource(foto);
 
     }
 
@@ -131,10 +139,7 @@ public class UserInfo extends AppCompatActivity {
     }
 
     public String idConta() {
-
-
         String IdUser = user.getUid();
-
         return IdUser;
 
 

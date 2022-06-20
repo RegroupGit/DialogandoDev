@@ -43,6 +43,7 @@
         android:clickable="true"
         android:contentDescription="@string/add_contato"
         android:focusable="true"
+        android:onClick="AdicionarContato"
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/switch_b"
         app:layout_constraintEnd_toEndOf="parent"
